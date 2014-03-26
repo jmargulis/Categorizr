@@ -119,8 +119,8 @@ if(!isset($_SESSION[$category])){
 	{
 		$_SESSION[$category] = "desktop";
 	} 
-	// Check if user agent is a Linux Desktop
-	else if ((preg_match('/Linux/i', $ua)) && (preg_match('/X11/i', $ua)))
+	// Check if user agent is a Linux/ChromeOS Desktop
+	else if ((preg_match('/Linux|CrOS/i', $ua)) && (preg_match('/X11/i', $ua)))
 	{
 		$_SESSION[$category] = "desktop";
 	} 
